@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def sumEvenAfterQueries(self, nums: List[int], queries: List[List[int]]) -> List[int]:
         sum_even = 0
