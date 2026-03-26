@@ -1,0 +1,9 @@
+class Solution:
+    def predictTheWinner(self, nums: List[int]) -> bool:
+                 def select(l, r):
+                    if l == r:
+                        return nums[l]
+                    select_left = nums[l] - select(l+1, r)
+                    select_right = nums[r] - select(l, r-1)
+                    return max(select_left, select_right)
+                 return True if select(0, len(nums)-1) >= 0 else False       
